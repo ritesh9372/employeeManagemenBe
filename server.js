@@ -35,7 +35,11 @@ await testdbconnection();
 app.use(morgan(':method :url :status :response-time[1] ms'));
 
 app.use(cors({
-  origin: ['http://localhost:4200', 'http://localhost:4000'],
+  origin: [
+    'http://localhost:4200',
+    'http://localhost:4000',
+    'https://employeemanagemenfe.onrender.com'
+  ],
   credentials: true
 }));
 
